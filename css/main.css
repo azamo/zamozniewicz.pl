@@ -1,0 +1,123 @@
+html {
+	height: 100%;
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+body {
+	min-width: 320px;
+	-webkit-font-smoothing: antialiased;
+	background: #474747;
+	color: #F5F5F5;
+	font-size: 14px;
+	box-shadow: inset rgba(0, 0, 0, .5) 0 0 50px 10px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 100%;
+	flex-direction: row;
+}
+
+.wrapper {
+	padding: 0 20%;
+	font-family: 'Open Sans', serif;
+	flex: 1 1 100%;
+}
+
+h1 {
+	margin: 1rem 0;
+	font: normal 2.8rem/3.2rem 'Oswald';
+	text-shadow: 2px 2px 3px #000;
+}
+
+p {
+	margin: 1rem 0;
+	font-size: 1.2rem;
+}
+
+a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #71e9f4;
+	text-decoration: none;
+}
+
+/* ---------------------------------------------------    Social links */
+
+.links {
+	margin: 2rem 0 0;
+	padding: 0;
+	list-style: none;
+	line-height: 2.4rem;
+}
+
+.links:before,
+.links:after {
+	content:"";
+	display:table;
+}
+
+.links:after {
+	clear:both;
+}
+
+.links li {
+	float: left;
+	margin: 0 .5rem .5rem 0;
+	text-align: center;
+}
+
+.links a {
+	position: relative;
+	display: block;
+	width: 2.4rem;
+	height: 2.4rem;
+	background: #333;
+	border-radius: 1.2rem;
+	text-decoration: none;
+	text-indent: -999em;
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	transition: all .1s ease;
+}
+
+.links:hover a {
+	filter: blur(1px);
+}
+
+.links a:hover {
+	background: #222;
+	filter: blur(0);		
+	transform: scale(1.1);
+}
+
+.links a:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	line-height: 2.4rem;
+	content: attr(data-icon);
+	font-family: 'FontAwesome';
+	text-align: center;
+	text-indent: 0;
+}
+
+/* ---------------------------------------------------    Mobile */
+
+@media only screen and (max-width: 480px) {
+	h1 {
+		font-size: 2.0rem;
+		line-height: 2.6rem;
+	}
+}
